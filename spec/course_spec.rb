@@ -9,6 +9,7 @@ RSpec.describe Course do
 
     student1 = Student.new({name: "Morgan", age: 21})
     student2 = Student.new({name: "Jordan", age: 29})
+    
 
     expect(course.name).to eq("Calculus")
     expect(course.capacity).to eq(2)

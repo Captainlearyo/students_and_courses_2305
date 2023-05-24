@@ -15,7 +15,9 @@ class Gradebook
     end
 
     def list_all_students
-
+      list = {}
+      @courses.each{ |i|  list[i.name] = i.students }
+      list
     end 
 
     def students_below(threshold)
