@@ -44,7 +44,7 @@ class Gradebook
       @courses.each do |course|  
         course.students.each do |student| 
           if (min < student.grade) &&  (student.grade < max)
-            students_in_range << grades[student.name] = student.grade
+            students_in_range << {[student.name] => student.grade}
           end
         end
       end
