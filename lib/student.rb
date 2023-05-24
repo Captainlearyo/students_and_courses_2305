@@ -1,6 +1,5 @@
 class Student
  attr_reader :name, :age, :scores
- #attr__accessor :
     def initialize(hash)
       @name = hash[:name]
       @age = hash[:age]

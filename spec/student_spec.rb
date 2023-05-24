@@ -3,7 +3,7 @@ require './lib/student'
 
 RSpec.describe Student do
 
-  it "initializes" do
+  it "student works" do
     student = Student.new({name: "Morgan", age: 21})
 
     expect(student.name).to eq("Morgan")
