@@ -26,13 +26,19 @@ RSpec.describe Gradebook do
     expect(gradebook.courses).to eq([course1, course2])
 
     course1.enroll(student1) 
-    course1.enroll(student2)
-
+    course1.enroll(student2)  
     course2.enroll(student3) 
     course2.enroll(student4)
+    
 
     expect(gradebook.list_all_students).to eq({"Art" => [student3, student4], "Calculus" => [student1, student2]})
     
+    student1.log_score(89)
+    student2.log_score(70)
+    student3.log_score(99)
+    student4.log_score(60)
+
+    expect(gradebook.students_below(80)).to eq([student2, student4])
   end 
 
 end
