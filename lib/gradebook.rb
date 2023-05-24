@@ -28,4 +28,26 @@ class Gradebook
       students_below
     end
 
+    def all_grades
+      grades = {}
+      @courses.each do |course|  
+        course.students.each do |student| 
+            grades[student.name] = student.grade
+        end
+      end
+      grades 
+    end
+
+    def students_in_range(min, max)
+      students_below = []
+      @courses.each do |course|  
+        course.students.each do |student| 
+          if student.grade < threshold
+            students_below << student
+          end
+        end
+      end
+      students_below
+    end
+
 end

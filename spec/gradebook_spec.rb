@@ -39,6 +39,8 @@ RSpec.describe Gradebook do
     student4.log_score(60)
 
     expect(gradebook.students_below(80)).to eq([student2, student4])
+
+    expect(gradebook.all_grades).to eq({"Jordan"=>70.0, "Logen"=>99.0, "Morgan"=>89.0, "Paul"=>60.0})
   end 
 
 end
