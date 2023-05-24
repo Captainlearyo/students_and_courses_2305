@@ -4,10 +4,6 @@ class Gradebook
     def initialize(instructor)
       @instructor = instructor
       @courses = []
-
-       
-
-
     end  
 
     def add_course(course)

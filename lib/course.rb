@@ -6,14 +6,14 @@ class Course
       @students = []
     end  
 
-def full?
-  @capacity == @students.count
-end
+  def full?
+        @capacity == @students.count
+  end 
 
-def enroll(student)
-  if !full?
+  def enroll(student)
+    if !full?
     @students << student 
+    end
   end
-end
 
 end
