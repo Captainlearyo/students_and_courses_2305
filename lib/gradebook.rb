@@ -39,15 +39,16 @@ class Gradebook
     end
 
     def students_in_range(min, max)
-      students_below = []
+      students_in_range = []
+      grades = {}
       @courses.each do |course|  
         course.students.each do |student| 
-          if student.grade < threshold
-            students_below << student
+          if (min < student.grade) &&  (student.grade < max)
+            students_in_range << grades[student.name] = student.grade
           end
         end
       end
-      students_below
+      students_in_range
     end
 
 end
